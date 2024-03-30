@@ -1,13 +1,6 @@
 from django.contrib import admin
-from catalog.models import Product, Category
+from catalog.models import Product, Category, Contacts
 
-# Для моделей категории и продукта настройте отображение в административной панели.
-# Для категорий выведите id и наименование в список отображения, а для продуктов выведите
-# в список id, название, цену и категорию.
-#
-# При этом интерфейс вывода продуктов настройте так,
-# чтобы можно было результат отображения фильтровать по категории,
-# а также осуществлять поиск по названию и полю описания.
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -18,3 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
+
+@admin.register(Contacts)
+class ContactsAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'first_name', 'email',)
