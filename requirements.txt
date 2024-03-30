@@ -4,3 +4,4 @@ sqlparse==0.4.4
 tzdata==2024.1
 pillow
 psycopg2-binary
+ipython
