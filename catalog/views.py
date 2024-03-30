@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from catalog.models import Product
 
 
 def index_contacts(request):
@@ -12,4 +13,7 @@ def index_contacts(request):
     return render(request, 'catalog/index_contacts.html')
 
 def index_home(request):
-    return render(request, 'catalog/index_home.html')
+    top_products = Product.objects.order_by('-created_at')[:5]
+    for product in top_products:
+        print(f'{product.name} {product.price}')
+    return render(request, 'catalog/index_home.html', {'top_products': top_products})
