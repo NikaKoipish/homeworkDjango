@@ -1,0 +1,47 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Бытовая техника",
+      "description": "Техника для кухни"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "техника для сада и огорода",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "техника для дома",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "аксессуары",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Чайник",
+      "description": "Bosch\r\nс автоотключением\r\nцвет - белый",
+      "image": "",
+      "category": 1,
+      "price": 1000,
+      "created_at": "2024-03-30T06:35:35.540Z",
+      "updated_at": "2024-03-30T06:35:35.540Z"
+    }
+  }
+]
